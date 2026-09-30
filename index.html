@@ -1,1 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greater Works Family Ministry | Building Stronger Families & Communities</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ministry: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                            navy: '#0f172a',
+                            gold: '#d97706',
+                            amber: '#f59e0b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-ministry-600 selection:text-white">
 
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Brand -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-ministry-700 to-ministry-900 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-hands-holding-child text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="block font-bold text-slate-900 text-lg leading-tight tracking-tight">Greater Works</span>
+                        <span class="block text-xs font-semibold uppercase tracking-widest text-ministry-700">Family Ministry</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#home" class="hover:text-ministry-700 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-ministry-700 transition-colors">About Us</a>
+                    <a href="#ministries" class="hover:text-ministry-700 transition-colors">Ministries</a>
+                    <a href="#events" class="hover:text-ministry-700 transition-colors">Events</a>
+                    <a href="#impact" class="hover:text-ministry-700 transition-colors">Community</a>
+                    <a href="#contact" class="hover:text-ministry-700 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Action CTA -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="#contact" class="px-5 py-2.5 rounded-xl bg-ministry-700 text-white font-medium text-sm shadow-sm hover:bg-ministry-800 transition-all hover:shadow">
+                        Get Involved
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2">
+            <a href="#home" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">Home</a>
+            <a href="#about" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">About Us</a>
+            <a href="#ministries" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">Ministries</a>
+            <a href="#events" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">Events</a>
+            <a href="#impact" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">Community</a>
+            <a href="#contact" class="block py-2 px-3 rounded-lg text-slate-700 hover:bg-slate-50 font-medium">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-ministry-950 text-white py-24 lg:py-32 overflow-hidden">
+        <!-- Background Overlay / Decorative elements -->
+        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#16a34a_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="absolute right-0 top-1/4 w-96 h-96 bg-ministry-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:text-left">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-ministry-800/60 border border-ministry-600/40 px-3.5 py-1.5 rounded-full text-xs font-semibold text-ministry-200 uppercase tracking-wider backdrop-blur-sm">
+                        <i class="fa-solid fa-star text-amber-400"></i>
+                        <span>Registered 501(c)(3) Nonprofit • EIN: 33-3397397</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Empowering Families, <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-amber-300">Transforming Communities</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Greater Works Family Ministry is dedicated to spiritual growth, comprehensive family support, and community connection rooted in love, service, and care in Black Jack, Missouri.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#contact" class="px-8 py-4 rounded-xl bg-ministry-600 hover:bg-ministry-700 text-white font-semibold shadow-lg shadow-ministry-900/30 transition-all text-center">
+                            Connect With Us
+                        </a>
+                        <a href="#ministries" class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold border border-white/20 transition-all text-center backdrop-blur-sm">
+                            Explore Ministries
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-ministry-600 to-amber-500 rounded-2xl blur-lg opacity-30"></div>
+                        <div class="relative bg-slate-800/90 border border-slate-700 p-8 rounded-2xl shadow-2xl space-y-6 backdrop-blur-md">
+                            <div class="flex items-center space-x-4 border-b border-slate-700 pb-4">
+                                <div class="w-12 h-12 rounded-full bg-ministry-700/40 flex items-center justify-center text-emerald-400 text-xl font-bold">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-white">Visit Our Center</h3>
+                                    <p class="text-sm text-slate-400">13540 Old Jamestown Rd, Black Jack, MO</p>
+                                </div>
+                            </div>
+                            <div class="space-y-3 text-sm text-slate-300">
+                                <div class="flex items-center justify-between py-2 border-b border-slate-700/50">
+                                    <span class="text-slate-400">Support Line</span>
+                                    <span class="font-medium text-white">Family Care & Guidance</span>
+                                </div>
+                                <div class="flex items-center justify-between py-2 border-b border-slate-700/50">
+                                    <span class="text-slate-400">Official Email</span>
+                                    <span class="font-medium text-emerald-400 text-xs sm:text-sm">contact@greaterworksfamilyministry.dpdns.org</span>
+                                </div>
+                                <div class="flex items-center justify-between py-2">
+                                    <span class="text-slate-400">Status</span>
+                                    <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300">Active Non-Profit</span>
+                                </div>
+                            </div>
+                            <div class="pt-2">
+                                <a href="mailto:contact@greaterworksfamilyministry.dpdns.org" class="w-full block py-3 text-center bg-slate-700 hover:bg-slate-600 text-white rounded-xl font-medium text-sm transition-colors">
+                                    Send Direct Inquiry
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us & Mission Section -->
+    <section id="about" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-ministry-700 bg-ministry-50 px-3.5 py-1 rounded-full">Who We Are</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Rooted in Faith, Dedicated to Family</h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Greater Works Family Ministry is a recognized nonprofit organization dedicated to fostering spiritual growth, positive youth development, marital strengthening, and community welfare.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow space-y-4">
+                    <div class="w-14 h-14 rounded-xl bg-ministry-100 text-ministry-700 flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Our Mission</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        To equip families and individuals with spiritual resources, emotional support, and practical guidance to overcome life’s challenges and thrive in purpose.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow space-y-4">
+                    <div class="w-14 h-14 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Our Vision</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        A united community where every household experiences holistic health, deep spiritual connection, generational healing, and unwavering mutual support.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 border border-slate-100 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow space-y-4">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-hands-holding"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Core Values</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Compassion without judgment, integrity in all operations, steadfast community empowerment, and Christ-centered servant leadership.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ministries & Programs -->
+    <section id="ministries" class="py-20 lg:py-28 bg-slate-100/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-ministry-700 bg-ministry-50 px-3.5 py-1 rounded-full">Our Programs</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Ministries Tailored for Every Generation</h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Discover our specialized support groups, family workshops, and community outreach initiatives designed for holistic growth.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/60 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition-transform">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-ministry-50 text-ministry-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-people-roof"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Family Counseling & Support</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Offering confidential guidance, parental workshops, and marriage enrichment programs to build resilient household foundations.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-ministry-700">
+                        <span>Weekly Sessions Available</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/60 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition-transform">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-book-bible"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Spiritual Growth & Study</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Interactive Bible study circles, prayer nights, and spiritual mentorship designed to deepen personal faith and daily walk.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-amber-700">
+                        <span>Wednesdays & Sundays</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/60 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition-transform">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-hands-holding-heart"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Community Outreach</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Food distribution drives, seasonal clothing assistance, and practical aid for families and individuals in need across Missouri.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-emerald-700">
+                        <span>Monthly Drives</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/60 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition-transform">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-child-reaching"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Youth & Teen Mentorship</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Empowering the next generation through positive role modeling, academic tutoring, leadership camps, and safe social spaces.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-blue-700">
+                        <span>After School Programs</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Program 5 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/60 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition-transform">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Senior Care & Fellowship</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Honoring elders through regular wellness check-ins, transportation assistance, and joyful companionship gatherings.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-purple-700">
+                        <span>Bi-Weekly Visits</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Program 6 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/60 flex flex-col justify-between space-y-4 hover:-translate-y-1 transition-transform">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-rose-50 text-rose-700 flex items-center justify-center text-xl mb-4">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Life Skills Workshops</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Financial literacy seminars, career counseling, resume building, and household budgeting workshops for economic stability.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-rose-700">
+                        <span>Quarterly Seminars</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events & Activities -->
+    <section id="events" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-ministry-700 bg-ministry-50 px-3.5 py-1 rounded-full">Calendar</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Upcoming Community Gatherings</h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Join us for our upcoming fellowship events, community support drives, and special family workshops in Black Jack, MO.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Event 1 -->
+                <div class="bg-slate-50 border border-slate-200/70 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                    <div class="bg-ministry-700 text-white p-6 text-center">
+                        <span class="block text-xs uppercase tracking-widest text-emerald-200 font-semibold">October 15, 2026</span>
+                        <span class="text-2xl font-bold mt-1 block">Fall Family Enrichment Night</span>
+                    </div>
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                        <div class="space-y-3 text-sm text-slate-600">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-clock text-ministry-700"></i>
+                                <span>6:00 PM - 8:30 PM CST</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-location-dot text-ministry-700"></i>
+                                <span>13540 Old Jamestown Rd, Black Jack, MO</span>
+                            </div>
+                            <p class="pt-2 text-slate-700">
+                                An evening of fellowship, interactive parenting discussions, and dinner for local families in our community.
+                            </p>
+                        </div>
+                        <a href="#contact" class="w-full py-2.5 text-center bg-slate-900 hover:bg-ministry-700 text-white font-medium rounded-xl text-sm transition-colors block">
+                            Reserve Your Seat
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="bg-slate-50 border border-slate-200/70 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                    <div class="bg-amber-600 text-white p-6 text-center">
+                        <span class="block text-xs uppercase tracking-widest text-amber-200 font-semibold">October 22, 2026</span>
+                        <span class="text-2xl font-bold mt-1 block">Community Food & Care Drive</span>
+                    </div>
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                        <div class="space-y-3 text-sm text-slate-600">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-clock text-amber-600"></i>
+                                <span>9:00 AM - 1:00 PM CST</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-location-dot text-amber-600"></i>
+                                <span>Ministry Outreach Center</span>
+                            </div>
+                            <p class="pt-2 text-slate-700">
+                                Providing grocery boxes, winter apparel items, and personal care packages to local families preparing for the season.
+                            </p>
+                        </div>
+                        <a href="#contact" class="w-full py-2.5 text-center bg-slate-900 hover:bg-amber-600 text-white font-medium rounded-xl text-sm transition-colors block">
+                            Volunteer / Donate
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="bg-slate-50 border border-slate-200/70 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                    <div class="bg-emerald-800 text-white p-6 text-center">
+                        <span class="block text-xs uppercase tracking-widest text-emerald-200 font-semibold">November 5, 2026</span>
+                        <span class="text-2xl font-bold mt-1 block">Youth Leadership & Arts Camp</span>
+                    </div>
+                    <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                        <div class="space-y-3 text-sm text-slate-600">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-clock text-emerald-800"></i>
+                                <span>10:00 AM - 3:00 PM CST</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-location-dot text-emerald-800"></i>
+                                <span>13540 Old Jamestown Rd, Black Jack, MO</span>
+                            </div>
+                            <p class="pt-2 text-slate-700">
+                                Engaging teens and young adults in mentorship circles, creative arts, confidence-building, and skill workshops.
+                            </p>
+                        </div>
+                        <a href="#contact" class="w-full py-2.5 text-center bg-slate-900 hover:bg-emerald-800 text-white font-medium rounded-xl text-sm transition-colors block">
+                            Register Youth
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Impact Stats -->
+    <section id="impact" class="py-20 bg-gradient-to-r from-ministry-900 to-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-5xl font-extrabold text-emerald-400">500+</div>
+                    <div class="text-xs sm:text-sm text-slate-300 uppercase tracking-wider font-medium">Families Supported</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-5xl font-extrabold text-amber-400">120+</div>
+                    <div class="text-xs sm:text-sm text-slate-300 uppercase tracking-wider font-medium">Workshops Held</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-5xl font-extrabold text-emerald-400">50+</div>
+                    <div class="text-xs sm:text-sm text-slate-300 uppercase tracking-wider font-medium">Community Drives</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl sm:text-5xl font-extrabold text-amber-400">100%</div>
+                    <div class="text-xs sm:text-sm text-slate-300 uppercase tracking-wider font-medium">Faith & Care Driven</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us & Inquiry Section -->
+    <section id="contact" class="py-20 lg:py-28 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-ministry-700 bg-ministry-50 px-3.5 py-1 rounded-full">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">We Would Love to Hear From You</h2>
+                    <p class="text-slate-600 text-base leading-relaxed">
+                        Whether you need prayer, family support, or want to partner with our ministry in Black Jack, Missouri, reach out to us today.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-ministry-100 text-ministry-700 flex items-center justify-center text-xl shrink-0 mt-1">
+                                <i class="fa-solid fa-map-pin"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Physical Address</h3>
+                                <p class="text-slate-600 text-sm">13540 Old Jamestown Rd<br>Black Jack, Missouri 63033, United States</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-ministry-100 text-ministry-700 flex items-center justify-center text-xl shrink-0 mt-1">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Official Email</h3>
+                                <p class="text-ministry-700 text-sm font-medium">contact@greaterworksfamilyministry.dpdns.org</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-ministry-100 text-ministry-700 flex items-center justify-center text-xl shrink-0 mt-1">
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Nonprofit Tax ID (EIN)</h3>
+                                <p class="text-slate-600 text-sm font-semibold text-slate-800">33-3397397</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-slate-200/80">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6">Send Us a Message</h3>
+                    
+                    <!-- Form Status Box (Hidden by default) -->
+                    <div id="form-success" class="hidden mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-sm font-medium flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-lg"></i>
+                        <span>Thank you! Your message has been sent successfully. We will get back to you soon.</span>
+                    </div>
+
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-600 mb-1.5">Your Full Name</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-ministry-600 text-sm" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-600 mb-1.5">Email Address</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-ministry-600 text-sm" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-600 mb-1.5">Subject / Inquiry Type</label>
+                            <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-ministry-600 text-sm bg-white">
+                                <option>Family Counseling & Support</option>
+                                <option>Spiritual Growth & Study</option>
+                                <option>Community Outreach & Donations</option>
+                                <option>General Inquiry / Prayer Request</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase text-slate-600 mb-1.5">Your Message</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-ministry-600 text-sm" placeholder="How can we help or partner with you today?"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-ministry-700 hover:bg-ministry-800 text-white font-semibold text-sm shadow-sm transition-colors">
+                            Submit Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-slate-800">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-9 h-9 rounded-lg bg-ministry-700 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-hands-holding-child"></i>
+                        </div>
+                        <span class="font-bold text-white text-base">Greater Works Family Ministry</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Dedicated to strengthening families, supporting local communities, and promoting spiritual wellness in Black Jack, Missouri.
+                    </p>
+                    <div class="pt-2 text-xs text-emerald-400 font-semibold bg-slate-800/80 p-2.5 rounded-lg inline-block border border-slate-700">
+                        Official Non-Profit EIN: 33-3397397
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="space-y-4">
+                    <h3 class="text-sm font-bold text-white uppercase tracking-wider">Quick Links</h3>
+                    <ul class="space-y-2 text-xs font-medium">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About Our Mission</a></li>
+                        <li><a href="#ministries" class="hover:text-white transition-colors">Ministries & Programs</a></li>
+                        <li><a href="#events" class="hover:text-white transition-colors">Community Events</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="space-y-4">
+                    <h3 class="text-sm font-bold text-white uppercase tracking-wider">Ministries</h3>
+                    <ul class="space-y-2 text-xs font-medium">
+                        <li><a href="#ministries" class="hover:text-white transition-colors">Family Counseling & Support</a></li>
+                        <li><a href="#ministries" class="hover:text-white transition-colors">Spiritual Growth & Study</a></li>
+                        <li><a href="#ministries" class="hover:text-white transition-colors">Community Outreach Drives</a></li>
+                        <li><a href="#ministries" class="hover:text-white transition-colors">Youth & Teen Mentorship</a></li>
+                        <li><a href="#ministries" class="hover:text-white transition-colors">Senior Care Fellowship</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="space-y-4">
+                    <h3 class="text-sm font-bold text-white uppercase tracking-wider">Official Contact</h3>
+                    <div class="text-xs space-y-2 text-slate-300">
+                        <p><i class="fa-solid fa-location-dot text-ministry-600 mr-2"></i>13540 Old Jamestown Rd<br>Black Jack, MO 63033</p>
+                        <p><i class="fa-solid fa-envelope text-ministry-600 mr-2"></i>contact@greaterworksfamilyministry.dpdns.org</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; 2026 Greater Works Family Ministry. All rights reserved. 501(c)(3) Non-Profit.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#home" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#home" class="hover:text-slate-400">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Contact form submission handler simulation
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const successBox = document.getElementById('form-success');
+            const form = document.getElementById('contact-form');
+            
+            successBox.classList.remove('hidden');
+            form.reset();
+            
+            successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            setTimeout(() => {
+                successBox.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
